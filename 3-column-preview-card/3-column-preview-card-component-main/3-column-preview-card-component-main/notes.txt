@@ -1,0 +1,9 @@
+Added all the files to GitHub
+Added divs, h1, p and images
+Added CSS
+Added buttons and CSS
+
+To Do:
+Start using Grid
+Add some JavaScript for active/hover mode
+Add Grid to Media tags
