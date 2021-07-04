@@ -14,82 +14,91 @@
     @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-    body{
-      font-size:15px;
-      display:grid;
-      align-content:center;
-      margin:25vh;
-      margin-left:50vh;
-      margin-right:50vh;
-      background-color: hsl(0, 0%, 95%);
+      * {
+        box-sizing: border-box;
+      }
+      body{
+        font-size:15px;
+        display:grid;
+        align-content:center;
+        margin:25vh;
+        margin-left:50vh;
+        margin-right:50vh;
+        background-color: hsl(0, 0%, 95%);
+        grid-column: auto;
+      }
+      button{
+        border:2px solid hsl(0, 0%, 95%);
+        border-radius: 100px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right:20px;
+        mix-blend-mode:screen;
+        background-color: hsl(0, 0%, 95%);
+        font-family:'Lexend Deca', sans-serif;
 
-    }
-    button{
-      border:none;
-      border-radius: 100px;
-      padding: 10px;
-      padding-left: 20px;
-      padding-right:20px;
-      mix-blend-mode:screen;
-      background-color: hsl(0, 0%, 95%);
-      font-family:'Lexend Deca', sans-serif;
+      }
+      button:active{
+        background-color: hsla(0, 0%, 100%, 0);
+        border:2px solid hsl(0, 0%, 95%);
+        color:hsl(0, 0%, 95%);
+      }
+      p{
+        color:hsla(0, 0%, 100%, 0.75);
+        font-family:'Lexend Deca', sans-serif;
+        font-weight:400;
+      }
+      h1{
+        color:white;
+        font-family:'Big Shoulders Display', sans-serif;
+        font-weight:700;
+      }
+      .sedans{
+        background-color:hsl(31, 77%, 52%);
+        grid-column:1;
+        padding:7vh;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
 
-    }
-    p{
-      color:hsla(0, 0%, 100%, 0.75);
-      font-family:'Lexend Deca', sans-serif;
-      font-weight:400;
-    }
-    h1{
-      color:white;
-      font-family:'Big Shoulders Display', sans-serif;
-      font-weight:700;
-    }
-    .sedans{
-      background-color:hsl(31, 77%, 52%);
-      grid-column:1;
-      padding:7vh;
+      }
 
+      .suvs{
+        background-color:hsl(184, 100%, 22%);
+        grid-column:2;
+        padding:7vh;
+
+      }
+      .luxury{
+        background-color:hsl(179, 100%, 13%);
+        grid-column:3;
+        padding:7vh;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+
+      }
+    @media only screen and (max-width:375px){
+      body{
+        display:grid;
+        grid-auto-flow: dense;
+      }
+      .sedans{
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+        width:100%;
+      }
+      .suvs{
+        width:100%;
+      }
+      .luxury{
+        border-bottom-right-radius:10px;
+        border-bottom-left-radius:10px;
+        width:100%;
+      }
     }
 
-    .SUVs{
-      background-color:hsl(184, 100%, 22%);
-      grid-column:2;
-      padding:7vh;
-    }
-    .luxury{
-      background-color:hsl(179, 100%, 13%);
-      grid-column:3;
-      padding:7vh;
+    @media only screen and (max-width:1440px){
 
-    }
-    @media only screen and (min-width:375px){
-    body{
-      display:grid;
 
-    }
-    .sedans{
-      border-top-left-radius:10px;
-      border-top-right-radius:10px;
-      grid-row:1;
-    }
-    .luxury{
-      border-bottom-right-radius:10px;
-      border-bottom-left-radius:10px;
-      grid-row:1;
-    }
-    }
-    
-    @media only screen and (min-width:1440px){
-    .sedans {
-      border-top-left-radius:10px;
-      border-bottom-left-radius:10px;
-      grid-row:1;
-    }
-    .luxury{
-      border-top-right-radius:10px;
-      border-bottom-right-radius:10px;
-    }
     }
   </style>
 </head>
@@ -101,7 +110,7 @@
   or on your next road trip.</p>
   <button>Learn More</button>
 </div>
-<div class="SUVs">
+<div class="suvs">
   <img src="images/icon-suvs.svg" alt="suvs">
   <h1>SUVs</h1>
   <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
