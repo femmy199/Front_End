@@ -16,6 +16,13 @@
     .attribution a { color: hsl(228, 45%, 44%); }
     body{
       font-size:15px;
+      display:grid;
+      align-content:center;
+      margin:25vh;
+      margin-left:50vh;
+      margin-right:50vh;
+      background-color: hsl(0, 0%, 95%);
+
     }
     button{
       border:none;
@@ -40,18 +47,49 @@
     }
     .sedans{
       background-color:hsl(31, 77%, 52%);
+      grid-column:1;
+      padding:7vh;
+
     }
+
     .SUVs{
       background-color:hsl(184, 100%, 22%);
+      grid-column:2;
+      padding:7vh;
     }
-    .Luxury{
+    .luxury{
       background-color:hsl(179, 100%, 13%);
-    }
-    @media only screen and (min-width:375px;){
+      grid-column:3;
+      padding:7vh;
 
     }
-    @media only screen and (min-width:1440px;){
+    @media only screen and (min-width:375px){
+    body{
+      display:grid;
 
+    }
+    .sedans{
+      border-top-left-radius:10px;
+      border-top-right-radius:10px;
+      grid-row:1;
+    }
+    .luxury{
+      border-bottom-right-radius:10px;
+      border-bottom-left-radius:10px;
+      grid-row:1;
+    }
+    }
+    
+    @media only screen and (min-width:1440px){
+    .sedans {
+      border-top-left-radius:10px;
+      border-bottom-left-radius:10px;
+      grid-row:1;
+    }
+    .luxury{
+      border-top-right-radius:10px;
+      border-bottom-right-radius:10px;
+    }
     }
   </style>
 </head>
@@ -70,7 +108,7 @@
   and off-road adventures.</p>
   <button>Learn More</button>
 </div>
-<div class="Luxury">
+<div class="luxury">
   <img src="images/icon-luxury.svg" alt="luxury">
   <h1>Luxury</h1>
   <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
